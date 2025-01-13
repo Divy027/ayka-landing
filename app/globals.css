@@ -69,4 +69,7 @@
 .animate-glitch-2 {
   animation: glitch-2 2.7s infinite linear alternate-reverse;
 }
+html {
+  scroll-behavior: smooth;
+}
 
