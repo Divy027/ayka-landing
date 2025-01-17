@@ -79,7 +79,7 @@ export default function Home() {
               </button>
               </Link>
               <p className="text-sm text-gray-400 mt-4">
-    Website Made by{" "}
+    Website made by{" "}
     <a
       href="https://t.me/Divy027"
       target="_blank"
