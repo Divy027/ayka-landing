@@ -1,16 +1,14 @@
 "use client";
 import { GlitchText } from "@/components/glitch-text"
-import { SocialButton } from "@/components/social-button"
 import { Button } from "@/components/ui/button"
-import { BellIcon as BrandTelegram, XIcon as BrandX } from 'lucide-react'
 import Image from "next/image"
-import { RiTelegramLine,  } from "react-icons/ri";
-import { IoDocumentTextOutline } from "react-icons/io5";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useState } from "react"
 import lore101 from "../public/lore101.jpeg"
 import lore102 from "../public/lore102.png"
 import lore103 from "../public/lore103.png"
+import Header from "@/components/header";
+import Link from "next/link";
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
@@ -29,26 +27,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
       {/* Header */}
-      <header className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-[#ff00ff]/20">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <GlitchText className="text-2xl font-bold">AYKA</GlitchText>
-          <div className="flex items-center gap-4">
-            <SocialButton href="https://t.me/holywhores">
-              <RiTelegramLine className="w-5 h-5" />
-              <span className="hidden sm:inline">Telegram</span>
-            </SocialButton>
-            <SocialButton href="https://x.com/ayka69dotexe">
-              <BrandX className="w-5 h-5" />
-              <span className="hidden sm:inline">Twitter</span>
-            </SocialButton>
-            <SocialButton href="#lore">
-              <IoDocumentTextOutline className="w-5 h-5" />
-              <span className="hidden sm:inline">Lore</span>
-            </SocialButton>
-          </div>
-        </div>
-      </header>
-
+     <Header/>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-16">
@@ -88,6 +67,9 @@ export default function Home() {
               </div>
             </div>
             <div>
+              <Link href="/chat-with-ayka">
+              
+             
               <button className="relative px-8 py-3 text-2xl font-bold text-white bg-black border-4 border-transparent rounded-lg hover:border-[#00ffff] hover:bg-gradient-to-r hover:from-[#ff00ff] hover:to-[#00ffff] transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_20px_#ff00ff] overflow-hidden">
                 <span className="absolute inset-0 bg-black/40 blur-lg opacity-10" />
                 <span className="relative">
@@ -95,6 +77,22 @@ export default function Home() {
                 </span>
                 <div className="absolute inset-0 animate-pulse rounded-lg bg-gradient-to-r from-[#ff00ff]/30 to-[#00ffff]/30 opacity-50" />
               </button>
+              </Link>
+              <p className="text-sm text-gray-400 mt-4">
+    Website Made by{" "}
+    <a
+      href="https://t.me/Divy027"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#ff00ff] font-semibold"
+    >
+      <GlitchText>
+      @Divy027
+      </GlitchText>
+   
+    </a>
+  </p>
+
             </div>
           </div>
         </div>
@@ -159,6 +157,7 @@ export default function Home() {
         </div>
       </div>
     </section>
+
     </main>
   )
 }
